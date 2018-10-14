@@ -18,9 +18,12 @@ public class Job extends GenericEntity {
     public static final String ROOT_NAME = "jobs";
 
     @NotBlank
-    private String description;
-    @NotBlank
     private String command;
+    @NotBlank
+    private String commandLanguage;
+    private String arguments = "";
+    @NotBlank
+    private String description;
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "job_tag", joinColumns = @JoinColumn(name = "job_id"), inverseJoinColumns = @JoinColumn(name = "tag_id"),
             uniqueConstraints = @UniqueConstraint(columnNames = { "job_id", "tag_id" }))

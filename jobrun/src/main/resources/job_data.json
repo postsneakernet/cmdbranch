@@ -1,0 +1,46 @@
+{
+		"jobId": 1,
+		"jobBatchId": 1,
+		"jobScheduleId": 1,
+		"name": "jobA",
+		"command": "import time, sys\ntime.sleep(3)\nprint('hello, world')\nprint('{} {} {}'.format(sys.argv[0], sys.argv[1], sys.argv[2]))\nsys.stderr.write('oops')\n",
+		"commandLanguage": "python",
+        "arguments": "hello world",
+		"childJobs": [{
+			"jobId": 2,
+			"jobBatchId": 1,
+			"jobScheduleId": 1,
+			"name": "jobAA",
+			"command": "command jobAA\n",
+			"commandLanguage": "error",
+            "arguments": "",
+			"childJobs": []
+		}, {
+			"jobId": 3,
+			"jobBatchId": 1,
+			"jobScheduleId": 1,
+			"name": "jobAB",
+			"command": "command jobAB\n",
+			"commandLanguage": "bash",
+            "arguments": "",
+			"childJobs": [{
+				"jobId": 4,
+				"jobBatchId": 1,
+				"jobScheduleId": 1,
+				"name": "jobABA",
+				"command": "command jobABA\n",
+				"commandLanguage": "bash",
+                "arguments": "",
+				"childJobs": [{
+					"jobId": 5,
+					"jobBatchId": 1,
+					"jobScheduleId": 1,
+					"name": "jobABAA",
+					"command": "import time, sys\ntime.sleep(3)\nprint(\"goodbye, world\")\nsys.stderr.write(\"oops\")\n",
+					"commandLanguage": "python",
+                    "arguments": "",
+                  "childJobs": []
+				}]
+			}]
+		}]
+}

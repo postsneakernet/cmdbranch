@@ -1,0 +1,11 @@
+server:
+    port: 8002
+
+logging:
+    level:
+        org.springframework.web: INFO
+        #org.hibernate: DEBUG
+
+debug:
+    job.execution: false
+    job.simulation: false

@@ -20,8 +20,8 @@ public abstract class GenericController<T extends GenericEntity, U extends Gener
     @Autowired
     protected U service;
     @Autowired
-    private Mapper mapper;
-    private String rootName;
+    protected Mapper mapper;
+    protected final String rootName;
 
     public GenericController(String rootName) {
         this.rootName = rootName;

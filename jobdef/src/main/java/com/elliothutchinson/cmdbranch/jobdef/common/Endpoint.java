@@ -14,7 +14,7 @@ import java.util.Map;
 @Setter
 @NoArgsConstructor
 public class Endpoint {
-    private Map<String, String> endpoints = new HashMap<>();
+    private final Map<String, String> endpoints = new HashMap<>();
 
     public Endpoint(String host) {
         String scheme = "http://";

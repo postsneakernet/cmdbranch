@@ -13,6 +13,8 @@ public class JobService extends GenericService<Job, JobRepository> {
         Job createdJob = new Job();
         createdJob.setName(job.getName());
         createdJob.setCommand(job.getCommand());
+        createdJob.setCommandLanguage(job.getCommandLanguage());
+        createdJob.setArguments(job.getArguments());
         return repository.save(createdJob);
     }
 }
