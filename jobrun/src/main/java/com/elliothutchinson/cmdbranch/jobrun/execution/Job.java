@@ -5,7 +5,8 @@ import com.elliothutchinson.cmdbranch.jobrun.execution.strategy.ExecutionStrateg
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
-import lombok.*;
+import lombok.Builder;
+import lombok.Value;
 
 import java.util.List;
 

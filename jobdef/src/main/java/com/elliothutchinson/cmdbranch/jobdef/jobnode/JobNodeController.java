@@ -1,7 +1,7 @@
 package com.elliothutchinson.cmdbranch.jobdef.jobnode;
 
-import com.elliothutchinson.cmdbranch.jobdef.common.generic.GenericController;
 import com.elliothutchinson.cmdbranch.jobdef.common.ApiConfig;
+import com.elliothutchinson.cmdbranch.jobdef.common.generic.GenericController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;

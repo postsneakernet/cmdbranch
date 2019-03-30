@@ -1,7 +1,7 @@
 package com.elliothutchinson.cmdbranch.jobdef.common;
 
-import com.elliothutchinson.cmdbranch.jobdef.jobbatch.JobBatch;
 import com.elliothutchinson.cmdbranch.jobdef.job.Job;
+import com.elliothutchinson.cmdbranch.jobdef.jobbatch.JobBatch;
 import com.elliothutchinson.cmdbranch.jobdef.jobnode.JobNode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +18,7 @@ public class Endpoint {
 
     public Endpoint(String host) {
         String scheme = "http://";
-        String baseUrl = String.format("%s%s/%s", scheme, host, ApiConfig.API_ROOT);
+        String baseUrl = String.format("%s%s%s", scheme, host, ApiConfig.API_ROOT);
         endpoints.put(Job.ROOT_NAME, String.format("%s/%s", baseUrl, "jobs"));
         endpoints.put(JobNode.ROOT_NAME, String.format("%s/%s", baseUrl, "jobNodes"));
         endpoints.put(JobBatch.ROOT_NAME, String.format("%s/%s", baseUrl, "jobBatches"));
